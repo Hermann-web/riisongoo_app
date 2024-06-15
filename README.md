@@ -1,21 +1,54 @@
-# riisongoo_app
+# Challenge Riisongoo App
 
-Ce repo est une application basique developpée en react native expo SDK 51.
+## Description
 
-## Prerequis
-Si ce n'est pas dejà fait vous devez instaler sur votre machine (Node v20+) [https://nodejs.org/] et (Git)[https://git-scm.com/downloads].
+Ce projet est une application qui utilise l'API pour afficher une liste d'articles.
 
-## Comment faire fonctionner le code ?
+## Instructions pour exécuter le projet
 
-1. Cloner le repo en local
-```Shell
-git clone https://github.com/limto18/riisongoo_app.git
-```
-3. Placer vous dans le repertoire /frontend pour installer les dependances avec la commande:
-   ```Shell
-   npm install
-   ```
-4. Lancer et tester le code
-```Shell
-npm start
-``` 
+1. Clonez le dépôt :
+    ```sh
+    git clone https://github.com/your-username/riisongoo_app.git
+    ```
+
+2. Accédez au répertoire du projet :
+    ```sh
+    cd riisongoo_app/frontend
+    ```
+
+3. Ouvrez le projet dans votre éditeur de code préféré. Par exemple, avec Visual Studio Code :
+    ```sh
+    code .
+    ```
+
+4. Dans le terminal de votre éditeur de code, accédez au répertoire `frontend` :
+    ```sh
+    cd frontend
+    ```
+
+5. Installez les dépendances :
+    ```sh
+    npm install
+    ```
+
+6. Installez `ngrok` pour le partage de l'application en local :
+    ```sh
+    npm install ngrok -g
+    ```
+
+7. Démarrez l'application :
+    ```sh
+    npx expo start
+    ```
+
+8. Une fois l'application lancée, vous pouvez partager votre application en local en exécutant `ngrok` :
+    ```sh
+    ngrok http 19006
+    ```
+
+   Copiez le lien généré par `ngrok` (par exemple, `http://abcd1234.ngrok.io`) pour partager votre application avec d'autres appareils ou personnes.
+
+## API
+
+L'application utilise l'API fournie pour obtenir la liste des articles. La route utilisée est :
+- `GET https://testapi.rii-songoo.pw/api/articles/anon/`
