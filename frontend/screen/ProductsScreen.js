@@ -10,10 +10,11 @@ export function ProductsScreen ({navigation}) {
 
   async function getProducts() {
     try {
-      const response = await fetch('https://testapi.rii-songoo.pw/api/articles/anon/');
+      const response = await fetch('https://testapi.rii-songoo.pw/api/articles/');
       const data = await response.json();
       if (data.status === 'SUCCESS') {
-        setProducts(data.articles);
+        console.log("data.articles = ",data.data)
+        setProducts(data.data);
       } else {
         console.error('Failed to fetch articles:', data.message);
       }
